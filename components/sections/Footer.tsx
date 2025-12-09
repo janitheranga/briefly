@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github, Twitter, Linkedin } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { HiOutlineMail } from "react-icons/hi";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,10 +16,10 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:hello@briefly.app", label: "Email" },
+    { icon: FaXTwitter, href: "#", label: "Twitter" },
+    { icon: FaGithub, href: "#", label: "GitHub" },
+    { icon: FaLinkedin, href: "#", label: "LinkedIn" },
+    { icon: HiOutlineMail, href: "mailto:hello@briefly.app", label: "Email" },
   ];
 
   return (
@@ -32,9 +34,19 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="text-2xl font-bold bg-linear-to-r from-powder-petal-500 to-frosted-mint-500 bg-clip-text text-transparent mb-4">
-              Briefly
-            </div>
+            <motion.a
+              href="#hero"
+              initial={{ opacity: 0, x: -20, y: 10 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              whileHover={{ scale: 1.08, y: -4 }}
+              whileTap={{ scale: 0.95 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-2xl font-bold bg-linear-to-r from-powder-petal-500 to-frosted-mint-500 bg-clip-text text-transparent cursor-pointer hover:drop-shadow-lg transition-shadow duration-300">
+                Briefly
+              </div>
+            </motion.a>
             <p className="text-sm text-mauve-shadow-600 dark:text-mauve-shadow-400 mb-6">
               Transform your notes into concise summaries with AI-powered
               intelligence.

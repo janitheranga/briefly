@@ -41,6 +41,13 @@ export function HeroSection() {
     }
   };
 
+  const badges = [
+    {id: 1, avatar: "👩‍🎓"},
+    {id: 2, avatar: "👨‍💼"},
+    {id: 3, avatar: "👩‍💻"},
+    {id: 4, avatar: "👨‍🔧"},
+  ]
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background gradient */}
@@ -113,13 +120,13 @@ export function HeroSection() {
               className="flex items-center gap-4"
             >
               <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
+                {badges.map((badge) => (
                   <motion.div
-                    key={i}
+                    key={badge.id}
                     whileHover={{ scale: 1.1, zIndex: 10 }}
                     className="w-10 h-10 rounded-full bg-linear-to-r from-powder-petal-500 to-frosted-mint-500 border-2 border-background dark:border-background flex items-center justify-center text-white font-bold text-sm"
                   >
-                    {String.fromCharCode(64 + i)}
+                    {badge.avatar}
                   </motion.div>
                 ))}
               </div>
