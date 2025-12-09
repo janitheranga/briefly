@@ -1,9 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  FileText,
+  Sparkles,
+  Ruler,
+  Tag,
+  FolderTree,
+  Search,
+  Users,
+  MessageSquare,
+  History,
+  FileOutput,
+  Link2,
+  Webhook,
+} from "lucide-react";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/Button";
 
 export function ProductShowcaseSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,28 +28,40 @@ export function ProductShowcaseSection() {
       description:
         "Upload or paste your notes and get instant AI-powered summaries. Perfect for meeting notes, lectures, and articles.",
       features: [
-        "Multi-format support",
-        "Real-time processing",
-        "Customizable length",
+        { label: "Multi-format support", icon: FileText },
+        { label: "Real-time processing", icon: Sparkles },
+        { label: "Customizable length", icon: Ruler },
       ],
     },
     {
       title: "Smart Organization",
       description:
         "Automatically categorize and tag your summaries. Build a searchable knowledge base of all your notes.",
-      features: ["Auto-tagging", "Smart folders", "Full-text search"],
+      features: [
+        { label: "Auto-tagging", icon: Tag },
+        { label: "Smart folders", icon: FolderTree },
+        { label: "Full-text search", icon: Search },
+      ],
     },
     {
       title: "Collaborative Features",
       description:
         "Share summaries with team members, get feedback, and collaborate in real-time.",
-      features: ["Team workspaces", "Comments & feedback", "Version history"],
+      features: [
+        { label: "Team workspaces", icon: Users },
+        { label: "Comments & feedback", icon: MessageSquare },
+        { label: "Version history", icon: History },
+      ],
     },
     {
       title: "Export & Integration",
       description:
         "Export summaries in multiple formats and integrate with your favorite productivity tools.",
-      features: ["Multiple formats", "API access", "Webhook support"],
+      features: [
+        { label: "Multiple formats", icon: FileOutput },
+        { label: "API access", icon: Link2 },
+        { label: "Webhook support", icon: Webhook },
+      ],
     },
   ];
 
@@ -106,19 +132,46 @@ export function ProductShowcaseSection() {
                     {slides[currentSlide].description}
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    {slides[currentSlide].features.map((feature, idx) => (
-                      <motion.div
-                        key={idx}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 + idx * 0.1 }}
-                        className="p-4 rounded-lg bg-powder-petal-50 dark:bg-powder-petal-950 border border-powder-petal-200 dark:border-powder-petal-800"
-                      >
-                        <p className="text-sm font-semibold text-powder-petal-700 dark:text-powder-petal-300">
-                          {feature}
-                        </p>
-                      </motion.div>
-                    ))}
+                    {slides[currentSlide].features.map((feature, idx) => {
+                      const Icon = feature.icon;
+                      return (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.2 + idx * 0.1 }}
+                          className="p-4 rounded-lg bg-powder-petal-50 dark:bg-powder-petal-950 border border-powder-petal-200 dark:border-powder-petal-800"
+                        >
+                          <div className="flex flex-col items-center justify-center gap-4 h-full">
+                            <motion.p
+                              className="text-sm font-semibold text-powder-petal-700 dark:text-powder-petal-300 text-center leading-snug"
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{
+                                delay: 0.2 + idx * 0.1,
+                                duration: 0.4,
+                              }}
+                            >
+                              {feature.label}
+                            </motion.p>
+                            <motion.span
+                              className="p-3 rounded-xl bg-powder-petal-100 dark:bg-powder-petal-900 text-powder-petal-600 dark:text-powder-petal-200"
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{
+                                delay: 0.3 + idx * 0.1,
+                                duration: 0.4,
+                                type: "spring",
+                                stiffness: 100,
+                              }}
+                              whileHover={{ scale: 1.15, rotate: 5 }}
+                            >
+                              <Icon className="w-10 h-10" />
+                            </motion.span>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
                   </div>
                 </motion.div>
               </div>
