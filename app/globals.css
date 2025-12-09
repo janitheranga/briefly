@@ -3,13 +3,71 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+  
+  /* Powder Petal */
+  --color-powder-petal-50: #ffefe5;
+  --color-powder-petal-100: #ffdfcc;
+  --color-powder-petal-200: #ffbe99;
+  --color-powder-petal-300: #ff9e66;
+  --color-powder-petal-400: #ff7e33;
+  --color-powder-petal-500: #ff5e00;
+  --color-powder-petal-600: #cc4b00;
+  --color-powder-petal-700: #993800;
+  --color-powder-petal-800: #662500;
+  --color-powder-petal-900: #331300;
+  --color-powder-petal-950: #240d00;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Frosted Mint */
+  --color-frosted-mint-50: #f5faeb;
+  --color-frosted-mint-100: #ebf5d6;
+  --color-frosted-mint-200: #d6eaae;
+  --color-frosted-mint-300: #c2e085;
+  --color-frosted-mint-400: #add55d;
+  --color-frosted-mint-500: #99cb34;
+  --color-frosted-mint-600: #7aa22a;
+  --color-frosted-mint-700: #5c7a1f;
+  --color-frosted-mint-800: #3d5115;
+  --color-frosted-mint-900: #1f290a;
+  --color-frosted-mint-950: #151c07;
+
+  /* Muted Teal */
+  --color-muted-teal-50: #eff6f3;
+  --color-muted-teal-100: #deede7;
+  --color-muted-teal-200: #bedace;
+  --color-muted-teal-300: #9dc8b6;
+  --color-muted-teal-400: #7cb69e;
+  --color-muted-teal-500: #5ca385;
+  --color-muted-teal-600: #49836b;
+  --color-muted-teal-700: #376250;
+  --color-muted-teal-800: #254135;
+  --color-muted-teal-900: #12211b;
+  --color-muted-teal-950: #0d1713;
+
+  /* Jungle Teal */
+  --color-jungle-teal-50: #eff6f4;
+  --color-jungle-teal-100: #dfece8;
+  --color-jungle-teal-200: #bfd9d1;
+  --color-jungle-teal-300: #9fc6ba;
+  --color-jungle-teal-400: #7eb4a4;
+  --color-jungle-teal-500: #5ea18d;
+  --color-jungle-teal-600: #4b8171;
+  --color-jungle-teal-700: #396054;
+  --color-jungle-teal-800: #264038;
+  --color-jungle-teal-900: #13201c;
+  --color-jungle-teal-950: #0d1614;
+
+  /* Mauve Shadow */
+  --color-mauve-shadow-50: #f4f1f3;
+  --color-mauve-shadow-100: #e8e3e7;
+  --color-mauve-shadow-200: #d2c6cf;
+  --color-mauve-shadow-300: #bbaab7;
+  --color-mauve-shadow-400: #a48e9f;
+  --color-mauve-shadow-500: #8e7187;
+  --color-mauve-shadow-600: #715b6c;
+  --color-mauve-shadow-700: #554451;
+  --color-mauve-shadow-800: #392d36;
+  --color-mauve-shadow-900: #1c171b;
+  --color-mauve-shadow-950: #141013;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +77,83 @@
   }
 }
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  
+  --color-powder-petal-50: var(--color-powder-petal-50);
+  --color-powder-petal-100: var(--color-powder-petal-100);
+  --color-powder-petal-200: var(--color-powder-petal-200);
+  --color-powder-petal-300: var(--color-powder-petal-300);
+  --color-powder-petal-400: var(--color-powder-petal-400);
+  --color-powder-petal-500: var(--color-powder-petal-500);
+  --color-powder-petal-600: var(--color-powder-petal-600);
+  --color-powder-petal-700: var(--color-powder-petal-700);
+  --color-powder-petal-800: var(--color-powder-petal-800);
+  --color-powder-petal-900: var(--color-powder-petal-900);
+  --color-powder-petal-950: var(--color-powder-petal-950);
+
+  --color-frosted-mint-50: var(--color-frosted-mint-50);
+  --color-frosted-mint-100: var(--color-frosted-mint-100);
+  --color-frosted-mint-200: var(--color-frosted-mint-200);
+  --color-frosted-mint-300: var(--color-frosted-mint-300);
+  --color-frosted-mint-400: var(--color-frosted-mint-400);
+  --color-frosted-mint-500: var(--color-frosted-mint-500);
+  --color-frosted-mint-600: var(--color-frosted-mint-600);
+  --color-frosted-mint-700: var(--color-frosted-mint-700);
+  --color-frosted-mint-800: var(--color-frosted-mint-800);
+  --color-frosted-mint-900: var(--color-frosted-mint-900);
+  --color-frosted-mint-950: var(--color-frosted-mint-950);
+
+  --color-muted-teal-50: var(--color-muted-teal-50);
+  --color-muted-teal-100: var(--color-muted-teal-100);
+  --color-muted-teal-200: var(--color-muted-teal-200);
+  --color-muted-teal-300: var(--color-muted-teal-300);
+  --color-muted-teal-400: var(--color-muted-teal-400);
+  --color-muted-teal-500: var(--color-muted-teal-500);
+  --color-muted-teal-600: var(--color-muted-teal-600);
+  --color-muted-teal-700: var(--color-muted-teal-700);
+  --color-muted-teal-800: var(--color-muted-teal-800);
+  --color-muted-teal-900: var(--color-muted-teal-900);
+  --color-muted-teal-950: var(--color-muted-teal-950);
+
+  --color-jungle-teal-50: var(--color-jungle-teal-50);
+  --color-jungle-teal-100: var(--color-jungle-teal-100);
+  --color-jungle-teal-200: var(--color-jungle-teal-200);
+  --color-jungle-teal-300: var(--color-jungle-teal-300);
+  --color-jungle-teal-400: var(--color-jungle-teal-400);
+  --color-jungle-teal-500: var(--color-jungle-teal-500);
+  --color-jungle-teal-600: var(--color-jungle-teal-600);
+  --color-jungle-teal-700: var(--color-jungle-teal-700);
+  --color-jungle-teal-800: var(--color-jungle-teal-800);
+  --color-jungle-teal-900: var(--color-jungle-teal-900);
+  --color-jungle-teal-950: var(--color-jungle-teal-950);
+
+  --color-mauve-shadow-50: var(--color-mauve-shadow-50);
+  --color-mauve-shadow-100: var(--color-mauve-shadow-100);
+  --color-mauve-shadow-200: var(--color-mauve-shadow-200);
+  --color-mauve-shadow-300: var(--color-mauve-shadow-300);
+  --color-mauve-shadow-400: var(--color-mauve-shadow-400);
+  --color-mauve-shadow-500: var(--color-mauve-shadow-500);
+  --color-mauve-shadow-600: var(--color-mauve-shadow-600);
+  --color-mauve-shadow-700: var(--color-mauve-shadow-700);
+  --color-mauve-shadow-800: var(--color-mauve-shadow-800);
+  --color-mauve-shadow-900: var(--color-mauve-shadow-900);
+  --color-mauve-shadow-950: var(--color-mauve-shadow-950);
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
 }

@@ -2,13 +2,21 @@
   "name": "briefly",
   "version": "0.1.0",
   "private": true,
+  "description": "AI-Powered Note Summarization Landing Page",
+  "author": "Briefly Team",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.12",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.25",
+    "lucide-react": "^0.556.0",
     "next": "16.0.8",
     "react": "19.2.1",
     "react-dom": "19.2.1"
