@@ -9,7 +9,7 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className = "", variant = "default", size = "md", ...props }, ref) => {
     const baseStyles =
-      "font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background inline-flex items-center justify-center gap-2 whitespace-nowrap";
+      "font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer";
 
     const variants = {
       default:

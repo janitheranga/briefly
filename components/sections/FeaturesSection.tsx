@@ -93,11 +93,11 @@ export function FeaturesSection() {
                 viewport={{ once: true }}
                 whileHover={{ y: -8 }}
               >
-                <Card className="h-full hover:shadow-xl transition-shadow duration-300 rounded-2xl border-mauve-shadow-200 dark:border-mauve-shadow-800">
+                <Card className="h-full hover:shadow-xl transition-shadow duration-300 rounded-2xl border-mauve-shadow-200 dark:border-mauve-shadow-800 cursor-pointer">
                   <CardHeader>
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      className={`w-16 h-16 rounded-xl bg-linear-to-r ${feature.color} flex items-center justify-center mb-4 text-white`}
+                      className={`w-16 h-16 rounded-xl bg-linear-to-r ${feature.color} flex items-center justify-center mb-4 text-white cursor-pointer`}
                     >
                       <Icon className="w-8 h-8" />
                     </motion.div>

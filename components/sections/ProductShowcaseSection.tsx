@@ -142,7 +142,7 @@ export function ProductShowcaseSection() {
                           transition={{ delay: 0.2 + idx * 0.1 }}
                           className="p-4 rounded-lg bg-powder-petal-50 dark:bg-powder-petal-950 border border-powder-petal-200 dark:border-powder-petal-800"
                         >
-                          <div className="flex flex-col items-center justify-center gap-4 h-full">
+                          <div className="flex flex-col items-center justify-center gap-4 h-full cursor-pointer">
                             <motion.p
                               className="text-sm font-semibold text-powder-petal-700 dark:text-powder-petal-300 text-center leading-snug"
                               initial={{ opacity: 0, y: -10 }}
@@ -183,7 +183,7 @@ export function ProductShowcaseSection() {
                     <motion.button
                       key={idx}
                       onClick={() => setCurrentSlide(idx)}
-                      className={`h-2 rounded-full transition-all duration-300 ${
+                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                         idx === currentSlide
                           ? "w-8 bg-powder-petal-500"
                           : "w-2 bg-mauve-shadow-300 dark:bg-mauve-shadow-600"
@@ -197,7 +197,7 @@ export function ProductShowcaseSection() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={prevSlide}
-                    className="p-2 rounded-lg bg-background border border-mauve-shadow-200 dark:border-mauve-shadow-800 hover:bg-powder-petal-100 dark:hover:bg-powder-petal-900 transition-colors"
+                    className="p-2 rounded-lg bg-background border border-mauve-shadow-200 dark:border-mauve-shadow-800 hover:bg-powder-petal-100 dark:hover:bg-powder-petal-900 transition-colors cursor-pointer"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </motion.button>
@@ -205,7 +205,7 @@ export function ProductShowcaseSection() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={nextSlide}
-                    className="p-2 rounded-lg bg-background border border-mauve-shadow-200 dark:border-mauve-shadow-800 hover:bg-powder-petal-100 dark:hover:bg-powder-petal-900 transition-colors"
+                    className="p-2 rounded-lg bg-background border border-mauve-shadow-200 dark:border-mauve-shadow-800 hover:bg-powder-petal-100 dark:hover:bg-powder-petal-900 transition-colors cursor-pointer"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </motion.button>

@@ -63,7 +63,10 @@ export function ReviewsSection() {
   ];
 
   return (
-    <section id="reviews" className="py-20 px-4 sm:px-6 lg:px-8 bg-mauve-shadow-50 dark:bg-mauve-shadow-950 relative overflow-hidden">
+    <section
+      id="reviews"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-mauve-shadow-50 dark:bg-mauve-shadow-950 relative overflow-hidden"
+    >
       <div className="absolute inset-0 -z-10">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-jungle-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
       </div>
@@ -94,7 +97,7 @@ export function ReviewsSection() {
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
             >
-              <Card className="h-full hover:shadow-xl transition-shadow duration-300 rounded-2xl border-mauve-shadow-200 dark:border-mauve-shadow-800 overflow-hidden">
+              <Card className="h-full hover:shadow-xl transition-shadow duration-300 rounded-2xl border-mauve-shadow-200 dark:border-mauve-shadow-800 overflow-hidden cursor-pointer">
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">

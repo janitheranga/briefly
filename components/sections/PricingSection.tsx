@@ -94,7 +94,7 @@ export function PricingSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               whileHover={{ y: -6, scale: 1.01 }}
-              className={`relative rounded-2xl border shadow-lg backdrop-blur-sm bg-linear-to-b from-background/90 to-background/70 ${
+              className={`relative rounded-2xl border shadow-lg backdrop-blur-sm bg-linear-to-b from-background/90 to-background/70 cursor-pointer ${
                 tier.highlighted
                   ? "border-powder-petal-400 dark:border-powder-petal-500 shadow-powder-petal-200/40 dark:shadow-powder-petal-900/60"
                   : "border-mauve-shadow-200 dark:border-mauve-shadow-800"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,14 +34,16 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.1 }}
-            className="text-2xl font-bold bg-linear-to-r from-powder-petal-500 to-frosted-mint-500 bg-clip-text text-transparent"
-          >
-            Briefly
-          </motion.div>
+          <motion.a href="#hero">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              className="text-2xl font-bold bg-linear-to-r from-powder-petal-500 to-frosted-mint-500 bg-clip-text text-transparent cursor-pointer"
+            >
+              Briefly
+            </motion.div>
+          </motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -51,7 +54,7 @@ export function Header() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + index * 0.05 }}
-                className="text-foreground hover:text-powder-petal-500 transition-colors duration-200 text-sm font-medium"
+                className="text-foreground hover:text-powder-petal-500 transition-colors duration-200 text-sm font-medium cursor-pointer"
               >
                 {item}
               </motion.a>
@@ -73,7 +76,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden p-2 rounded-lg hover:bg-powder-petal-100 dark:hover:bg-powder-petal-900 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-powder-petal-100 dark:hover:bg-powder-petal-900 transition-colors cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -96,7 +99,7 @@ export function Header() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s/g, "-")}`}
-                  className="text-foreground hover:text-powder-petal-500 transition-colors duration-200 font-medium"
+                  className="text-foreground hover:text-powder-petal-500 transition-colors duration-200 font-medium cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   {item}

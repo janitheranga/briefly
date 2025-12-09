@@ -149,7 +149,7 @@ export function FAQSection() {
               onClick={() => setActiveCategory(category.id)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 cursor-pointer ${
                 activeCategory === category.id
                   ? "bg-powder-petal-500 text-white shadow-lg"
                   : "bg-mauve-shadow-100 dark:bg-mauve-shadow-800 text-foreground hover:bg-mauve-shadow-200 dark:hover:bg-mauve-shadow-700"

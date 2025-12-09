@@ -42,7 +42,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-72 h-72 bg-powder-petal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
