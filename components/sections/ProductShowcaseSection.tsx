@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 
 export function ProductShowcaseSection() {
@@ -47,8 +47,19 @@ export function ProductShowcaseSection() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(id);
+  }, [slides.length]);
+
   return (
-    <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-mauve-shadow-50 dark:bg-mauve-shadow-950 relative overflow-hidden">
+    <section
+      id="how-it-works"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-mauve-shadow-50 dark:bg-mauve-shadow-950 relative overflow-hidden"
+    >
       <div className="absolute inset-0 -z-10">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-powder-petal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
       </div>
