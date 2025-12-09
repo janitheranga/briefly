@@ -1,20 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function CompaniesSection() {
   const [duplicatedCompanies, setDuplicatedCompanies] = useState<string[]>([]);
 
   const companies = [
-    "Google",
-    "Microsoft",
-    "Stanford",
-    "Harvard",
-    "MIT",
-    "Apple",
-    "Amazon",
-    "Meta",
+    "google.svg",
+    "microsoft.svg",
+    "stanford.svg",
+    "harvard.svg",
+    "mit.svg",
+    "apple.svg",
+    "amazon.svg",
+    "meta.svg",
   ];
 
   useEffect(() => {
@@ -50,17 +51,22 @@ export function CompaniesSection() {
               ease: "linear",
             }}
           >
-            {duplicatedCompanies.map((company, index) => (
+            {duplicatedCompanies.map((logo, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="shrink-0 w-48"
+                className="shrink-0 w-48 h-20"
               >
-                <div className="h-20 rounded-xl bg-background border border-mauve-shadow-200 dark:border-mauve-shadow-800 flex items-center justify-center hover:shadow-lg hover:border-powder-petal-500 transition-all duration-300 cursor-pointer">
-                  <p className="text-lg font-semibold text-foreground">
-                    {company}
-                  </p>
+                <div className="w-full h-full rounded-xl bg-background border border-mauve-shadow-200 dark:border-mauve-shadow-800 flex items-center justify-center hover:shadow-lg hover:border-powder-petal-500 transition-all duration-300 cursor-pointer p-6">
+                  <div className="relative w-32 h-12">
+                    <Image
+                      src={`/logos/${logo}`}
+                      alt={logo.replace(".svg", "")}
+                      fill
+                      className="object-contain dark:invert opacity-70 hover:opacity-100 transition-opacity"
+                    />
+                  </div>
                 </div>
               </motion.div>
             ))}

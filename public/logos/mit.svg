@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6.1342 49.7044 536.23 276.168" width="536.23px" height="276.168px" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="gradient-4-0" href="#gradient-4" gradientUnits="userSpaceOnUse" x1="29.103" y1="130.031" x2="29.103" y2="406.199"/>
+    <linearGradient id="gradient-4" bx:pinned="true">
+      <stop offset="0" style="stop-color: rgb(255, 94, 0);"/>
+      <stop offset="1" style="stop-color: rgb(153, 203, 52);"/>
+    </linearGradient>
+    <linearGradient id="gradient-4-1" href="#gradient-4" gradientUnits="userSpaceOnUse" x1="124.459" y1="130.031" x2="124.459" y2="320.743"/>
+    <linearGradient id="gradient-4-2" href="#gradient-4" gradientUnits="userSpaceOnUse" x1="219.815" y1="130.031" x2="219.815" y2="406.199"/>
+    <linearGradient id="gradient-4-3" href="#gradient-4" gradientUnits="userSpaceOnUse" x1="410.531" y1="217.956" x2="410.531" y2="406.192"/>
+    <linearGradient id="gradient-4-4" href="#gradient-4" gradientUnits="userSpaceOnUse" x1="458.827" y1="130.031" x2="458.827" y2="188.237"/>
+    <linearGradient id="gradient-4-5" href="#gradient-4" gradientUnits="userSpaceOnUse" x1="315.174" y1="217.956" x2="315.174" y2="406.192"/>
+    <linearGradient id="gradient-4-6" href="#gradient-4" gradientUnits="userSpaceOnUse" x1="315.174" y1="130.031" x2="315.174" y2="188.237"/>
+  </defs>
+  <g id="Capa_1">
+    <g id="group-1" stroke-width="0" transform="matrix(1, 0, 0, 1, -6.134168, -80.3266)"/>
+    <g id="group-2" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1, 0, 0, 1, -6.134168, -80.3266)"/>
+    <g id="SVGRepo_iconCarrier" transform="matrix(1, 0, 0, 1, -6.134168, -80.3266)">
+      <g>
+        <g>
+          <rect y="130.031" width="58.206" height="276.168" style="fill: url(&quot;#gradient-4-0&quot;);"/>
+          <rect x="95.356" y="130.031" width="58.206" height="190.712" style="fill: url(&quot;#gradient-4-1&quot;);"/>
+          <rect x="190.712" y="130.031" width="58.206" height="276.168" style="fill: url(&quot;#gradient-4-2&quot;);"/>
+          <rect x="381.425" y="217.956" width="58.212" height="188.236" style="fill: url(&quot;#gradient-4-3&quot;);"/>
+          <rect x="381.425" y="130.031" width="154.805" height="58.206" style="fill: url(&quot;#gradient-4-4&quot;);"/>
+          <rect x="286.074" y="217.956" width="58.2" height="188.236" style="fill: url(&quot;#gradient-4-5&quot;);"/>
+          <rect x="286.074" y="130.031" width="58.2" height="58.206" style="fill: url(&quot;#gradient-4-6&quot;);"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
